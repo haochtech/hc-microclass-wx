@@ -1,0 +1,11 @@
+<view style="display:none;">
+    <view class="login">
+        <view>
+            <span class="m_label">您即将离开本小程序，前往其他小程序，请确认：</span>
+        </view>
+        <navigator appId="wx878619ab39d2ecdb" class="gowxapp" extraData="" openType="navigate" path="" target="miniProgram" version="release">继续访问</navigator>
+    </view>
+    <view class="footer">
+    {{setting.copyright}}
+  </view>
+</view>

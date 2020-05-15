@@ -1,0 +1,15 @@
+<view wx:if="{{show_app}}">
+    <web-view src="{{real_url?real_url:url}}"></web-view>
+</view>
+<view wx:if="{{show_btn}}">
+    <view class="login">
+        <image src="{{avatar}}"></image>
+        <view>
+            <span class="m_label">请点击“授权登陆”允许小程序授权登陆：</span>
+        </view>
+        <button bindgetuserinfo="updateUserInfo" class="m_button" openType="getUserInfo">授权登陆</button>
+    </view>
+    <view class="footer">
+    {{setting.copyright}}
+  </view>
+</view>

@@ -1,0 +1,34 @@
+body {
+    background: #f1f1f5;
+}
+
+.pwpage {
+    position: relative;
+    width: 280px;
+    margin: 25px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.pwd {
+    padding: 10px 10px 15px 10px;
+}
+
+.pwpage h1 {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    text-align: center;
+    margin: 5px 0 5px 0;
+    color: #ff5b35;
+}
+
+.pwpage .title {
+    font-size: 14px;
+}
+
+.pwpage .erweima {
+    width: 250px;
+}

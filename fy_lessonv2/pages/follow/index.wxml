@@ -1,0 +1,11 @@
+<view>
+    <official-account></official-account>
+</view>
+<view class="pwpage">
+    <view class="pwd">
+        <h1>点击查看关注公众号</h1>
+        <view class="title">{{lesson_follow_title}}</view>
+        <image class="erweima" src="{{attachurl}}{{qrcode}}" wx:if="{{qrcode}}"></image>
+        <p class="title" style="color:#909090;">点击右上角“关注”按钮关注公众号</p>
+    </view>
+</view>

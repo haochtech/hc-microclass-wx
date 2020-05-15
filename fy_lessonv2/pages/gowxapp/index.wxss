@@ -1,0 +1,36 @@
+page {
+    background-color: #f5f5f5;
+}
+
+.login {
+    background-color: #fff;
+    padding: 20px 20px 50px 20px;
+}
+
+.m_label {
+    display: inline-block;
+    max-width: 425px;
+    text-align: left;
+    width: 89%;
+    font-size: 14px;
+    color: #7c7b79;
+    padding: 19px 0;
+}
+
+.m_button {
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 18px;
+    background: #1aad19;
+    width: 85%;
+}
+
+.gowxapp {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #62ab00;
+    color: #fff;
+    padding: 10px 0px;
+    border-radius: 30px;
+}

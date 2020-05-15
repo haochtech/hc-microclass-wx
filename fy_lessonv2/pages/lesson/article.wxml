@@ -1,0 +1,15 @@
+<view class="rich_primary">
+    <view class="rich_title">{{section.title}}</view>
+    <view class="rich_mate">
+        <view class="rich_mate_text">{{section.addtime}}</view>
+        <view class="rich_mate_text"></view>
+        <view class="rich_mate_text href">{{lesson.teacher}}</view>
+    </view>
+    <view class="rich_content">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}"></template>
+    </view>
+</view>
+<view class="footer">
+  {{setting.copyright}}
+</view>
+<import src="../../../wxParse/wxParse.wxml"></import>

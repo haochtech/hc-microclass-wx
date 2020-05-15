@@ -1,0 +1,24 @@
+{
+    "pages": [
+        "fy_lessonv2/pages/index/index",
+        "fy_lessonv2/pages/newlesson/index",
+        "fy_lessonv2/pages/lesson/index",
+        "fy_lessonv2/pages/lesson/article",
+        "fy_lessonv2/pages/mylesson/index",
+        "fy_lessonv2/pages/vip/index",
+        "fy_lessonv2/pages/gowxapp/index",
+        "fy_lessonv2/pages/follow/index",
+        "wxapp_web/pages/view/pay",
+        "we7/pages/index/index",
+        "we7/pages/user/index/index"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "window": {
+        "navigationBarTitleText": "测试poss"
+    },
+    "sitemapLocation": "sitemap.json"
+}

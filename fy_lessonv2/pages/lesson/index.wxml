@@ -1,0 +1,50 @@
+<view class="content-inner">
+    <view class="video-wrap">
+        <view style="position:relative;" wx:if="{{sectionid==0}}">
+            <image mode="widthFix" src="{{lesson.images}}" style="min-height:200px;width:100%;"></image>
+        </view>
+    </view>
+    <ul class="course-tab">
+        <li bindtap="cutDirectory" class="{{lesson_show==0?'curr':''}}" data-key="0">详情</li>
+        <li bindtap="cutDirectory" class="{{lesson_show==1?'curr':''}}" data-key="1">目录</li>
+        <view style="clear:both;"></view>
+    </ul>
+    <view class="course-container">
+        <view class="js-tab" style="{{lesson_show==0?'display:block;':''}}">
+            <ul class="course-intro">
+                <li>
+                    <view class="chapter-title">课程介绍</view>
+                    <view class="lesson-content">
+                        <template is="wxParse" data="{{wxParseData:descript.nodes}}"></template>
+                    </view>
+                </li>
+            </ul>
+        </view>
+        <view class="js-tab" style="{{lesson_show==1?'display:block;':''}}">
+            <ul class="course-chapter">
+                <li>
+                    <view class="chapter-title">
+                        <navigator url="../lesson/index?id={{lesson.id}}">
+                            <i style="background: url(../../resource/images/learnicon.png) no-repeat 0 0;"></i>{{lesson.bookname}}[共{{section_count}}节课]
+            </navigator>
+                    </view>
+                    <ul class="course-sections">
+                        <li wx:if="{{section_count>0}}" wx:for="{{section_list}}" wx:key="key">
+                            <navigator class="section-title" url="../lesson/article?id={{lesson.id}}&sectionid={{item.id}}">
+                                <i class="fa fa-play-circle-o"></i>{{item.title}}
+              </navigator>
+                            <i class="section-state-icon">{{item.videotime}}</i>
+                        </li>
+                        <li style="height:auto;padding:10%;" wx:if="{{section_count==0}}">
+                            <a style="text-align:center;">抱歉，该课程没有找到任何内容~</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </view>
+        <view class="footer">
+      {{setting.copyright}}
+    </view>
+    </view>
+</view>
+<import src="../../../wxParse/wxParse.wxml"></import>

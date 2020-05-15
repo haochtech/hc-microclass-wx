@@ -1,0 +1,40 @@
+<view wx:if="{{sharewxappdd}}">
+    <web-view src="{{url}}"></web-view>
+</view>
+<view wx:if="{{!sharewxappdd}}">
+    <swiper autoplay="{{swiper.autoplay}}" class="swiper-banner" duration="{{swiper.duration}}" indicatorActiveColor="{{swiper.indicatorActiveColor}}" indicatorColor="{{swiper.indicatorColor}}" indicatorDots="{{swiper.indicatorDots}}" interval="{{swiper.interval}}" wx:if="{{banner_list.length>0}}">
+        <swiper-item class="banner" wx:for="{{banner_list}}" wx:for-item="banner" wx:key="key">
+            <image class="slide-image" src="{{banner.img}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="course_wrap mt10" wx:if="{{lesson}}">
+        <view class="course_hd">
+            <span class="bor-l"></span>课程学习
+    </view>
+        <ul class="course_main course_other">
+            <li class="course_item" wx:for="{{lesson}}" wx:key="key">
+                <navigator url="../lesson/index?id={{item.id}}">
+                    <view class="course_pic">
+                        <span class="course_ico courseNew" style="background:url('{{item.ico_name}}') no-repeat;background-size: 40px 40px;" wx:if="{{item.ico_name}}"></span>
+                        <image src="{{item.images}}" style="width:100%;"></image>
+                        <view class="course_living title">{{item.bookname}}</view>
+                    </view>
+                    <view>
+                        <span class="fl">共<i class="red-color">{{item.count}}</i>节课</span>
+                        <span class="fr"></span>
+                    </view>
+                    <view>
+                        <span class="fl"></span>
+                        <span class="fr">
+                            <i class="blue-color">{{item.buynumber}}</i>人已学习</span>
+                    </view>
+                </navigator>
+            </li>
+        </ul>
+    </view>
+    <view class="footer">
+    {{setting.copyright}}
+  </view>
+</view>
+<import src="/we7/pages/templates/footer.wxml"></import>
+<template is="footerWx" data="{{...tabBar}}"></template>

@@ -1,0 +1,38 @@
+page {
+    background-color: #f5f5f5;
+}
+
+.login {
+    padding: 20px 20px 50px 20px;
+}
+
+.login image {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 100%;
+}
+
+.m_label {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: #7c7b79;
+    padding: 40px 0;
+}
+
+.m_button {
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #1AAD19;
+    width: 80%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin: 20px auto 40px;
+}
